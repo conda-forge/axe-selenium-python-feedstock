@@ -1,5 +1,5 @@
 {% set name = "axe-selenium-python" %}
-{% set version = "2.1.6" %}
+{% set version = "3.0.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/axe-selenium-python-{{ version }}.tar.gz
-  sha256: 9203ff59c79edcfbcbd676ae55ca35f257e9afb663adbcbc210e3b0d802255ae
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8f082c821ce0c6c44a326a2df5bc5926c789d9b9600fbc052fb482ef20975513
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
